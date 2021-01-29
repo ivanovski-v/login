@@ -34,11 +34,11 @@ async function onSubmit() {
 
   try {
     await login(loginFormUI.email.value, loginFormUI.password.value);
-    loginFormUI.reset();
+    loginFormUI.form.reset();
 
     notificationsManagerUI.notify({
       msg: "Success",
-      alertClass: ".alert-success",
+      alertClass: "alert-success",
       timeout: 3000,
     });
   } catch {
